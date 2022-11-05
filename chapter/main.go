@@ -46,21 +46,85 @@ func main(){
 	// fmt.Scanf("%f", &feet);
 	// meters := feet * 0.3048;
 	// fmt.Println(meters)
-	for i := 0; i <= 10; i++ {
-		switch i {
-		case 0: fmt.Println("Zero")
-		case 1: fmt.Println("One")
-		case 2: fmt.Println("Two")
-		case 3: fmt.Println("Three")
-		default: fmt.Println("Im not printing the rest..")
-		}
-		var i = 1
-		for i < 100 {
-			if i % 3 == 0 && i % 5 == 0 {fmt.Println(i,":FizzBuzz")
-			} else if i % 3 == 0 {fmt.Println(i,":Fizz")
-			} else if i % 5 == 0 {fmt.Println(i,":Buzz")
-			} else {fmt.Println(i)}
-			i++
-		}
-	}
+	// for i := 0; i <= 10; i++ {
+	// 	switch i {
+	// 	case 0: fmt.Println("Zero")
+	// 	case 1: fmt.Println("One")
+	// 	case 2: fmt.Println("Two")
+	// 	case 3: fmt.Println("Three")
+	// 	default: fmt.Println("Im not printing the rest..")
+	// 	}
+	// 	var i = 1
+	// 	for i < 100 {
+	// 		if i % 3 == 0 && i % 5 == 0 {fmt.Println(i,":FizzBuzz")
+	// 		} else if i % 3 == 0 {fmt.Println(i,":Fizz")
+	// 		} else if i % 5 == 0 {fmt.Println(i,":Buzz")
+	// 		} else {fmt.Println(i)}
+	// 		i++
+	// 	}
+	// }
+		//Array, Slices and Maps
+		// var x[5]int;
+		// x[4] = 100;
+		// fmt.Println(x[4])
+
+		// scores :=[5]float32{34,454,56,234,54}
+		// var total float32 = 0
+		// for _, value := range scores {
+		// 	fmt.Println(value)
+		// 	total += value
+		// }
+		// fmt.Println(total / float32(len(scores)))
+		//  newScores := make([]float64,5,10)
+		// fmt.Scanf("%f", &newScores)
+		// fmt.Println(newScores[0])
+		// arr := []int{2,4,56,7,7,}
+		// fmt.Println(arr)
+		// y := append(arr,3,4,5)
+		// fmt.Println(y)
+		// 	slice1 := []int{1,2,3,}
+		// 	slice2 := make([]int, 2)
+		// 	slice3 := copy(slice2,slice1)
+		// 	fmt.Println(slice1,slice2)
+		// 	fmt.Println(slice3)
+		// x := make(map[int]int)
+		// x[5] = 10;
+		// fmt.Println(x)
+		// maps are a way to connect a value with a key
+			// the key can be of one type and the value can be of another or same type
+		// elements := make(map[string]string)
+		// elements["Hi"] = "Hydrogen";
+		// elements["He"] = "Helium"
+		// fmt.Println(elements["He"])
+		// name, ok := elements["Sh"];
+		// fmt.Println(name,ok)
+			// elements := map[string]map[string]string{
+			// 	"Hi": map[string]string{
+			// 		"name": "Hydrogen",
+			// 		"state": "gas",
+			// 	},
+			// 	"He": map[string]string{
+			// 		"name": "Helium",
+			// 		"state": "gas",
+			// 	}, "Li": map[string]string{
+			// 		"name": "Litihum",
+			// 		"state": "gas",
+			// 	},
+			// }
+			// if ele, ok := elements["He"]; ok {
+			// 	fmt.Println(ele["name"], ele["state"])
+			// }
+			x := []int{ 48,96,86,68,
+				57,82,63,70,
+				37,34,83,3,27,
+				19,97,9,17,4,
+			}
+			// // finiding the smallest number
+			for i := 0; i < len(x); i++ {
+				smallest := x[i]
+				for j:= 0; j < len(x); j++{
+					if x[j] < x[i] {smallest = x[j]} 
+					fmt.Println("the smallest is", smallest)
+				}
+			}
 }
