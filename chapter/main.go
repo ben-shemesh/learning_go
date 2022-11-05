@@ -41,10 +41,26 @@ func main(){
 	// fmt.Printf("the conversion from Celcius %d to fahrenheit is: %d degrees. \n",celcius, farenheitTemp  ) 
 	// fmt.Printf("the conversion from Celsius %d to fahrenheit is: %d degrees. \n",celcius, celciusTemp  	 ) 
 
-	fmt.Println("Please enter a number to that you want to convert from feet to meters.")
-	var feet float32;
-	fmt.Scanf("%f", &feet);
-	meters := feet * 0.3048;
-	fmt.Println(meters)
-
+	// fmt.Println("Please enter a number to that you want to convert from feet to meters.")
+	// var feet float32;
+	// fmt.Scanf("%f", &feet);
+	// meters := feet * 0.3048;
+	// fmt.Println(meters)
+	for i := 0; i <= 10; i++ {
+		switch i {
+		case 0: fmt.Println("Zero")
+		case 1: fmt.Println("One")
+		case 2: fmt.Println("Two")
+		case 3: fmt.Println("Three")
+		default: fmt.Println("Im not printing the rest..")
+		}
+		var i = 1
+		for i < 100 {
+			if i % 3 == 0 && i % 5 == 0 {fmt.Println(i,":FizzBuzz")
+			} else if i % 3 == 0 {fmt.Println(i,":Fizz")
+			} else if i % 5 == 0 {fmt.Println(i,":Buzz")
+			} else {fmt.Println(i)}
+			i++
+		}
+	}
 }
