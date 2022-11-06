@@ -3,8 +3,55 @@ package main
 import (
 	"fmt"
 )
-
+func averag(xs[]float64) float64 {
+	total2 := 0.0;
+	for _, v := range xs {
+		total2 += v
+	}
+	return total2
+}
+func timesTwo() func() uint{
+	i := uint(0)
+	return func() (picked uint) {
+		picked = i
+		i += 2
+		return
+	}
+}
+func factorial(x int) int {
+	if x == 0 {
+		return 1
+	}
+	fmt.Println(x)
+	return factorial(x -1)
+}
 func main(){
+	fmt.Println(factorial(12))
+	// theFunc := timesTwo()
+	// fmt.Println(theFunc())
+	// fmt.Println(theFunc())
+
+	// theSumUp := func(nums ...int) int {
+	// 	sums := 0;
+	// 	for _, theOnes := range nums {
+	// 		sums += theOnes
+	// 	}
+	// 	return sums;
+	// }
+	// myNewNum := 0
+	// incrementIt := func() int {
+	// 	myNewNum ++
+	// 	fmt.Println("the number is", myNewNum)
+	// 	return myNewNum
+	// }
+	// s2 := []float64{23,45,35,232,54,43,}
+	// totalReturn := averag(s2)
+	// fmt.Println(totalReturn)
+	// voradicFun := []int{23,34,10}
+	// myInts := []int{4,3,5}
+	// fmt.Println(theSumUp(myInts...))
+	// fmt.Println(incrementIt())
+	// fmt.Println(incrementIt())
 	// var name string;
 	// name = "Avin"
 	// fmt.Println("Hello,", name);
@@ -114,17 +161,27 @@ func main(){
 			// if ele, ok := elements["He"]; ok {
 			// 	fmt.Println(ele["name"], ele["state"])
 			// }
-			x := []int{ 48,96,86,68,
-				57,82,63,70,
-				37,34,83,3,27,
-				19,97,9,17,4,
-			}
-			// // finiding the smallest number
-			for i := 0; i < len(x); i++ {
-				smallest := x[i]
-				for j:= 0; j < len(x); j++{
-					if x[j] < x[i] {smallest = x[j]} 
-					fmt.Println("the smallest is", smallest)
-				}
-			}
+			// x := []int{ 48,96,86,68,
+			// 	57,82,63,70,
+			// 	37,34,83,3,27,
+			// 	19,97,9,17,4,
+			// }
+			// // // finiding the smallest number
+			// for i := 0; i < len(x); i++ {
+			// 	smallest := x[i]
+			// 	for j:= 0; j < len(x); j++{
+			// 		if x[j] < x[i] {smallest = x[j]} 
+			// 		fmt.Println("the smallest number is", smallest)
+			// 	}
+			// }
+
+	// xs := []float64{23,34,54,98,75,78,88,}
+	// total2 := 0.0;
+	// for _, v := range xs {
+	// 	total2 += v
+	// }
+	// fmt.Println(total2)
+	// dividedBy := float64(len(xs))
+	// fmt.Println(dividedBy)
+	// fmt.Println(total2 / dividedBy)
 }
