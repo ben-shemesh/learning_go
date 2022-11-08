@@ -23,10 +23,24 @@ func factorial(x int) int {
 		return 1
 	}
 	fmt.Println(x)
-	return factorial(x -1)
+	return x * factorial(x -1)
+}
+func squared(x int) int {
+	squaredResult := x * x
+	fmt.Println(squaredResult)
+	return squaredResult
+}
+func cubed(x int) int {
+	cubedResult := x *3
+	fmt.Println(cubedResult)
+	return cubedResult
 }
 func main(){
-	fmt.Println(factorial(12))
+	// defer squared(2)
+	// cubed(4)
+
+
+	fmt.Println(factorial(2))
 	// theFunc := timesTwo()
 	// fmt.Println(theFunc())
 	// fmt.Println(theFunc())
